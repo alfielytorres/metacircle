@@ -1,24 +1,37 @@
-import logo from './logo.svg';
+import { useState, useEffect } from "react"
 import './App.css';
+import { db } from "./firebase-config"
+import { collection, getDocs } from "firebase/firestore"
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+  const [mentees, setMentees] = useState([]);
+  const menteesCollectionRef = collection(db, "mentees");
+  
+  useEffect(()=>{
+    const getMentees =  async () => {
+      const data = await getDocs(menteesCollectionRef);
+      console.log(data);
+      setMentees(data.docs.map((doc)=>({ ...doc.data(), id: doc.id})));
+    }
+
+    getMentees();
+    
+  }, []);
+
+
+  return  (<div className="App">
+  {mentees.map( (mentee) => {
+    return(
+      <div>
+        <h1>Name: {mentee.name}</h1>
+        <h1>Age: {mentee.age}</h1>
+      </div>
+    );
+  })}
+
+  </div>
   );
 }
 
