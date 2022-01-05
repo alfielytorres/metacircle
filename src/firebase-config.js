@@ -3,7 +3,7 @@ import React, {useState, useEffect} from "react"
 import { initializeApp } from "firebase/app";
 
 import { getFirestore } from "@firebase/firestore";
-import { getAuth, createUserWithEmailAndPassword, signOut, onAuthStateChanged, signInWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider,createUserWithEmailAndPassword, signOut, onAuthStateChanged, signInWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -30,6 +30,19 @@ const firebaseConfig = {
   
   export function  signup(email, password){
     return createUserWithEmailAndPassword(auth, email, password);
+    
+  }
+
+  export function  signInWithGoogle(){
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider)
+    .then((event)=>{
+      console.log(event)
+
+    })
+    .catch((error)=>{
+      console.log(error)
+    })
   }
 
 
