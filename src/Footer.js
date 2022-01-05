@@ -102,25 +102,20 @@ function Footer() {
             </div>
             <div className="md:max-w-md lg:col-span-2">
               <span className="text-base font-medium tracking-wide text-gray-300">
-                Subscribe for updates
+                Get Updates
               </span>
               <form className="flex flex-col mt-4 md:flex-row">
-                <input
-                  placeholder="Email"
-                  required
-                  type="text"
-                  className="flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
-                />
-                <button
-                  type="submit"
+                
+                <a
+                  href="https://alfiebuilds.substack.com/"
                   className="group relative w-full flex justify-center py-3 px-3 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                 >
                     
-                  Subscribe
-                </button>
+                  Go to the Newsletter
+                </a>
               </form>
               <p className="mt-4 text-sm text-gray-500">
-                Get updates on new features and how to make the best use of your meta circle
+                All updates about Meta Circle and its family of micro start ups will be added on to the Newsletter
               </p>
             </div>
           </div>
