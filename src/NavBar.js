@@ -155,6 +155,7 @@ function NavBar() {
                 </div>
                 <nav>
                   <ul className="space-y-4">
+                    
                     <li>
                       <a
                         href="/"
@@ -162,17 +163,7 @@ function NavBar() {
                         title="Our product"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        Product
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/"
-                        aria-label="Our product"
-                        title="Our product"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        Features
+                       What is a Meta Circle?
                       </a>
                     </li>
                     <li>
@@ -182,7 +173,7 @@ function NavBar() {
                         title="Product pricing"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        Pricing
+                        Features
                       </a>
                     </li>
                     <li>
@@ -192,7 +183,7 @@ function NavBar() {
                         title="About us"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        About us
+                        Pricing
                       </a>
                     </li>
                     
