@@ -15,7 +15,7 @@ function Footer() {
                       href="/"
                       className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                     >
-                      Our Story
+                      Home
                     </a>
                   </li>
                   <li>
@@ -87,20 +87,13 @@ function Footer() {
                   Other
                 </p>
                 <ul className="mt-2 space-y-2">
+                
                   <li>
                     <a
                       href="/"
                       className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                     >
-                      Press Kit
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/"
-                      className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
-                    >
-                     Careers 
+                     Get Involved 
                     </a>
                   </li>
                   

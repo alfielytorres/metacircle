@@ -28,6 +28,7 @@ function NavBar() {
                     <img src={logo} alt="metacircle logo" className="mr-2" width="40"></img>
                     
                     <span className="font-bold">Meta Circle</span>
+                    <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-indigo-100 bg-blue-700 rounded">BETA</span>
                     </a>
             </div>
             
@@ -40,7 +41,7 @@ function NavBar() {
                 title="Our product"
                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
               >
-                Product
+                What is a Meta Circle?
               </a>
             </li>
             <li>
@@ -63,16 +64,7 @@ function NavBar() {
                 Pricing
               </a>
             </li>
-            <li>
-              <a
-                href="/"
-                aria-label="About us"
-                title="About us"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-              >
-                About us
-              </a>
-            </li>
+           
           </ul>
         </div>
         <ul className="flex items-center hidden space-x-8 lg:flex">
