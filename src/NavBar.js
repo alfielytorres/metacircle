@@ -1,8 +1,22 @@
 import { useState, useEffect } from "react"
 import logo from './logo.png'
-
+import { useAuth, logout } from "./firebase-config"
 function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const currentUser = useAuth();
+    const [ loading, setLoading ] = useState(false);
+
+
+  async function handleLogout(){
+    setLoading(true);
+    try {
+      await logout();
+    } catch {
+      alert("error!")
+    }
+    setLoading(false);
+ 
+  }
 
     return (
         <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
@@ -62,26 +76,36 @@ function NavBar() {
           </ul>
         </div>
         <ul className="flex items-center hidden space-x-8 lg:flex">
+            <li>  
+              {currentUser?.email} 
+            </li>
           <li>
-            <a
-              href="/"
-              aria-label="Sign in"
-              title="Sign in"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-            >
-              Sign in
-            </a>
+
+          {currentUser ?
+          
+                        <button
+                        onClick={handleLogout}
+                        disabled={loading || !currentUser}
+                        className="group relative w-full flex justify-center py-3 px-3 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                        aria-label="Log out"
+                        title="Log ou"
+                      >
+                        Logout
+                      </button> : 
+
+                      <a
+                      className="group relative w-full flex justify-center py-3 px-3 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                      aria-label="Get Started"
+                      title="Get Started"
+                      >
+                      Get Started
+                      </a>
+                      }
+          
           </li>
-          <li>
-            <a
-                href="/"
-                className="group relative w-full flex justify-center py-3 px-3 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                aria-label="Get Started"
-                title="Get Started"
-            >
-                Get Started
-            </a>
-          </li>
+
+     
+          
         </ul>
         <div className="lg:hidden">
           <button
@@ -179,26 +203,37 @@ function NavBar() {
                         About us
                       </a>
                     </li>
+                    
                     <li>
-                      <a
-                        href="/"
-                        aria-label="Sign in"
-                        title="Sign in"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        Sign in
-                      </a>
+                    
+                      {currentUser?.email}
+                  
+                      
                     </li>
                     <li>
                       <a
+                        
                         href="/"
+                        hidden={loading || currentUser}
                         className="group relative w-full flex justify-center py-3 px-3 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                         aria-label="Get Started"
                         title="Get Started"
                       >
                         Get Started
                       </a>
+
+
+                    
                     </li>
+
+
+
+
+
+
+
+
+
                   </ul>
                 </nav>
               </div>
