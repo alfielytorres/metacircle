@@ -4,6 +4,7 @@ import './App.css';
 import NavBar from "./NavBar"
 import Footer from "./Footer"
 import Login from "./Login"
+import ResetPassword from "./ResetPassword"
 import { db } from "./firebase-config"
 import { collection, getDocs } from "firebase/firestore"
 
@@ -39,6 +40,7 @@ function App() {
         );
     })}
      <Login/>
+     <ResetPassword/>
     <Footer/>
   </div>
   );
