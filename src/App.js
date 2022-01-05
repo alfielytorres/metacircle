@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react"
 import './App.css';
+
+import NavBar from "./NavBar"
+import Footer from "./Footer"
+import Login from "./Login"
 import { db } from "./firebase-config"
 import { collection, getDocs } from "firebase/firestore"
 
@@ -20,17 +24,22 @@ function App() {
     
   }, []);
 
-
-  return  (<div className="App">
-  {mentees.map( (mentee) => {
-    return(
-      <div>
-        <h1>Name: {mentee.name}</h1>
-        <h1>Age: {mentee.age}</h1>
-      </div>
-    );
-  })}
-
+  return  (
+  <div className="App">
+    <NavBar/>
+   
+    {mentees.map( (mentee) => {
+        return(
+        <div className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
+            <div>
+              <div className="text-xl font-medium text-black">{mentee.name}</div>
+              <p className="text-gray-500">{mentee.age} years old</p>
+            </div>
+         </div>
+        );
+    })}
+     <Login/>
+    <Footer/>
   </div>
   );
 }
