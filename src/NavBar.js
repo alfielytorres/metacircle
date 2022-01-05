@@ -27,8 +27,8 @@ function NavBar() {
                     <a href="#" className="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900">
                     <img src={logo} alt="metacircle logo" className="mr-2" width="40"></img>
                     
-                    <span className="font-bold">Meta Circle</span>
-                    <span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-indigo-100 bg-blue-700 rounded">BETA</span>
+                    <span className="font-bold mr-2">Meta Circle</span>
+                    <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-indigo-100 bg-blue-700 rounded">ALPHA</span>
                     </a>
             </div>
             
