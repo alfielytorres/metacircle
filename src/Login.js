@@ -1,5 +1,6 @@
-import { LockClosedIcon } from '@heroicons/react/solid'
+import { LockClosedIcon, UserIcon } from '@heroicons/react/solid'
 import React, {useRef,useState } from 'react'
+
 import logo from './logo.png'
 import {signup, login, logout, signInWithGoogle} from "./firebase-config"
 
@@ -108,7 +109,7 @@ function Login() {
                 className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
               >
                 <span className="absolute left-0 inset-y-0 flex items-center pl-3">
-                  <LockClosedIcon className="h-5 w-5 text-blue-500 group-hover:text-blue-400" aria-hidden="true" />
+                  <LockClosedIcon className="h-5 w-5 text-white-500 group-hover:text-white-400" aria-hidden="true" />
                 </span>
                 Create Your Account
               </button>
@@ -118,10 +119,10 @@ function Login() {
               <button
            
                 onClick= {handleLogin}
-                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-black-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
               >
                 <span className="absolute left-0 inset-y-0 flex items-center pl-3">
-                  <LockClosedIcon className="h-5 w-5 text-blue-500 group-hover:text-blue-400" aria-hidden="true" />
+                  <UserIcon className="h-5 w-5 text-white-500 group-hover:text-white-400" aria-hidden="true" />
                 </span>
                 Login your account
               </button>
@@ -131,11 +132,9 @@ function Login() {
               <button
            
                 onClick= {signInWithGoogle}
-                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-black-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
               >
-                <span className="absolute left-0 inset-y-0 flex items-center pl-3">
-                  <LockClosedIcon className="h-5 w-5 text-blue-500 group-hover:text-blue-400" aria-hidden="true" />
-                </span>
+            
                Sign in with Google
               </button>
             </div>
