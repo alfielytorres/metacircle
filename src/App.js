@@ -1,6 +1,6 @@
 
 import './App.css';
-
+import React, { useEffect } from 'react';
 import NavBar from "./NavBar"
 import Footer from "./Footer"
 import Login from "./Login"
@@ -11,6 +11,7 @@ import ResetPassword from "./ResetPassword"
 
 function App() {
 
+  
 
 
   const currentUser = useAuth();
