@@ -1,7 +1,7 @@
 import { LockClosedIcon } from '@heroicons/react/solid'
 import React, {useRef,useState } from 'react'
-import logo from './logo.png'
-import {resetPassword} from "./firebase-config"
+import logo from '../logo.png'
+import {resetPassword} from "../firebase-config"
 
 function ResetPassword() {
   const emailRef = useRef();

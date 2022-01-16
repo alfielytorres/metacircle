@@ -3,11 +3,12 @@ import './App.css';
 import React, { useEffect } from 'react';
 import NavBar from "./NavBar"
 import Footer from "./Footer"
-import Login from "./Login"
+import Login from "./Pages/Login"
+import Home from "./Pages/Home"
 import Mentees from "./Mentees"
 import { useAuth } from "./firebase-config"
-import ResetPassword from "./ResetPassword"
-
+import ResetPassword from "./Pages/ResetPassword"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 function App() {
 
@@ -20,22 +21,17 @@ function App() {
   
 
   return  (
-  <div className="App">
-    <NavBar/>
-
-    {currentUser?  
-      
-      <Mentees/>: 
-    
-      <div>
-        <Login/>
-        <ResetPassword/>
-      </div>
-    }
-    
-     
-    <Footer/>
-  </div>
+  <Router>
+    <div className="App">
+      <NavBar/>
+      <Routes>
+        <Route path='/' element={<Home/>}/> 
+        <Route path='/login' element={<Login/>}/> 
+        <Route path='/reset' element={<ResetPassword/>}/> 
+        </Routes>
+      <Footer/>
+    </div>
+  </Router>
   );
 }
 
