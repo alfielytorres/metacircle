@@ -2,35 +2,64 @@ import { LockClosedIcon, UserIcon } from '@heroicons/react/solid'
 import React, {useRef,useState } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../logo.png'
-import {signup, login, logout, signInWithGoogle} from "../firebase-config"
+import {signup, login} from "../firebase-config"
+import { useNavigate } from "react-router-dom";
+import {  signInWithPopup, GoogleAuthProvider, getAuth } from "firebase/auth";
+
+
 
 function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const [ loading, setLoading ] = useState(false);
+  const navigate = useNavigate();
+  const auth = getAuth();
 
   async function handleSignup(){
     setLoading(true);
     try {
       await signup(emailRef.current.value, passwordRef.current.value)
+     
     } catch {
       alert("error!")
+ 
     }
     setLoading(false);
  
   }
   
 
+  
 
 
+  function  signInWithGoogle(){
+    
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider)
+    .then((event)=>{
+      console.log(event)
+      navigate("/dashboard")
 
+    })
+    .catch((error)=>{
+      console.log(error)
+      navigate("/login")
+   
+    })
+  }
 
   async function handleLogin(){
     setLoading(true);
     try {
-      await login(emailRef.current.value, passwordRef.current.value)
+      await login(emailRef.current.value, passwordRef.current.value).then(()=>{
+        navigate("/dashboard")
+      })
+
+
+
     } catch {
       alert("error!")
+      navigate("/login")
     }
     setLoading(false);
  

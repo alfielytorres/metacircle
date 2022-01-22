@@ -5,6 +5,7 @@ import NavBar from "./NavBar"
 import Footer from "./Footer"
 import Login from "./Pages/Login"
 import Home from "./Pages/Home"
+import Dashboard from "./Pages/Dashboard"
 import Mentees from "./Mentees"
 import { useAuth } from "./firebase-config"
 import ResetPassword from "./Pages/ResetPassword"
@@ -28,6 +29,7 @@ function App() {
         <Route path='/' element={<Home/>}/> 
         <Route path='/login' element={<Login/>}/> 
         <Route path='/reset' element={<ResetPassword/>}/> 
+        <Route path='/dashboard' element={<Dashboard/>}/> 
         </Routes>
       <Footer/>
     </div>

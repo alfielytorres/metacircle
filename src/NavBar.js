@@ -2,16 +2,19 @@ import { useState, useEffect } from "react"
 import logo from './logo.png'
 import { Link } from 'react-router-dom'
 import { useAuth, logout } from "./firebase-config"
+import { useNavigate } from "react-router-dom";
+
 function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const currentUser = useAuth();
     const [ loading, setLoading ] = useState(false);
 
-
+  const navigate = useNavigate();
   async function handleLogout(){
     setLoading(true);
     try {
       await logout();
+      navigate("/")
     } catch {
       alert("error!")
     }

@@ -33,18 +33,7 @@ const firebaseConfig = {
     
   }
 
-  export function  signInWithGoogle(){
-    const provider = new GoogleAuthProvider();
-    signInWithPopup(auth, provider)
-    .then((event)=>{
-      console.log(event)
-
-    })
-    .catch((error)=>{
-      console.log(error)
-    })
-  }
-
+  
 
   export function  resetPassword(email){
     return sendPasswordResetEmail(auth, email);
