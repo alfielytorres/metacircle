@@ -44,7 +44,7 @@ function NavBar() {
                 title="Our product"
                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
               >
-                What is a Meta Circle?
+                Find a mentor
               </a>
             </li>
             <li>
@@ -54,19 +54,10 @@ function NavBar() {
                 title="Our product"
                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
               >
-                Features
+                Become a mentor
               </a>
             </li>
-            <li>
-              <a
-                href="/"
-                aria-label="Product pricing"
-                title="Product pricing"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-              >
-                Pricing
-              </a>
-            </li>
+            
            
           </ul>
         </div>
@@ -93,7 +84,7 @@ function NavBar() {
                       aria-label="Get Started"
                       title="Get Started"
                       >
-                      Get Started
+                      Sign Up/ Sign In
                       </Link>
                       }
           
@@ -166,7 +157,7 @@ function NavBar() {
                         title="Our product"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                       What is a Meta Circle?
+                      Find a mentor
                       </a>
                     </li>
                     <li>
@@ -176,19 +167,10 @@ function NavBar() {
                         title="Product pricing"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                       >
-                        Features
+                        Be a mentor
                       </a>
                     </li>
-                    <li>
-                      <a
-                        href="/"
-                        aria-label="About us"
-                        title="About us"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                      >
-                        Pricing
-                      </a>
-                    </li>
+                    
                     
                     <li>
                     
@@ -217,7 +199,7 @@ function NavBar() {
                         aria-label="Get Started"
                         title="Get Started"
                       >
-                        Get Started
+                          Sign Up/ Sign In
                       </Link>
 
 

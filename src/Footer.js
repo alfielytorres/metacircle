@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 
 function Footer() {
     return (
@@ -11,11 +12,19 @@ function Footer() {
                 </p>
                 <ul className="mt-2 space-y-2">
                   <li>
-                    <a
-                      href="/"
+                    <Link
+                      to="/"
                       className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                     >
                       Home
+                    </Link>
+                  </li>
+                  <li>
+                    <a
+                      href="/"
+                      className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
+                    >
+                      Find a mentor
                     </a>
                   </li>
                   <li>
@@ -23,15 +32,7 @@ function Footer() {
                       href="/"
                       className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
                     >
-                      Features
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/"
-                      className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
-                    >
-                      Pricing
+                      Be a mentor
                     </a>
                   </li>
                  
@@ -60,28 +61,7 @@ function Footer() {
                   
                 </ul>
               </div>
-              <div>
-                <p className="font-medium tracking-wide text-gray-300">Support</p>
-                <ul className="mt-2 space-y-2">
-                  <li>
-                    <a
-                      href="/"
-                      className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
-                    >
-                      FAQs
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/"
-                      className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
-                    >
-                      Get Help
-                    </a>
-                  </li>
-                  
-                </ul>
-              </div>
+              
               <div>
                 <p className="font-medium tracking-wide text-gray-300">
                   Other
@@ -121,7 +101,7 @@ function Footer() {
           </div>
           <div className="flex flex-col justify-between pt-5 pb-10 border-t border-gray-800 sm:flex-row">
             <p className="text-sm text-gray-500">
-              © Copyright 2020 Meta Circle. All rights reserved.
+              © Copyright 2022 Meta Circle. All rights reserved. Made by fullhaus.xyz
             </p>
             <div className="flex items-center mt-4 space-x-4 sm:mt-0">
               <a
