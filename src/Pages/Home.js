@@ -1,13 +1,16 @@
 import React from 'react'
 import logo from '../logo.png'
+import Footer from "../Footer"
+import NavBar from "../NavBar"
 import { useNavigate, Link } from 'react-router-dom'
 function Home() {
    
-    let naviate = useNavigate();
+    let navigate = useNavigate();
   
     return (
-     
-       <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+     <div>
+       <NavBar/>
+       <div className="text- min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
 
 
@@ -38,7 +41,7 @@ function Home() {
               <br/>
               <button
            
-                onClick={()=>{naviate("/login")}}
+                onClick={()=>{navigate("/login")}}
                 className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-black-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
               >
                 
@@ -54,7 +57,9 @@ function Home() {
    
         </div>
         </div>
-  
+
+        <Footer/>
+        </div>
     )
   }
   

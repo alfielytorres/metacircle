@@ -23,8 +23,9 @@ function NavBar() {
   }
 
     return (
-        <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-      <div className="relative flex items-center justify-between">
+      <div className="items-center border-b-2 border-gray-200">
+        <div className="pl-5 pr-5 py-1 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 ">
+      <div className="relative flex items-center justify-between ">
         <div className="flex items-center">
           
             <div>
@@ -226,7 +227,9 @@ function NavBar() {
             </div>
           )}
         </div>
+        
       </div>
+    </div>
     </div>
     )
 }
