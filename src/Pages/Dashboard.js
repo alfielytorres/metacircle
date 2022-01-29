@@ -21,19 +21,19 @@ function Dashboard() {
               
                 </div>
 
-                <main role="main" className="w-full flex-grow pt-1 px-3">
+                <main role="main" className="w-full flex-grow pt-1 px-5">
     
-                  <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900 ">
-                    Welcome to Meta Circle!
+                  <h2 className="mt-6 text-center text-3xl  text-gray-900 ">
+                   Make a booking ... 
                     </h2>
                 </main>
 
                 <div className="w-fixed w-full flex-shrink flex-grow-0 px-2
                  border-l-2 
                  border-gray-100">
-                    <div className="flex sm:flex-col px-2">
-                      Top Mentors
-                      </div>
+                     <h4 className="mt-6 text-center text-2xl  text-gray-900 ">
+                   Top Mentors 
+                    </h4>
                 </div>
             
 

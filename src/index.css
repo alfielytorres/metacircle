@@ -13,14 +13,22 @@
          bg-white
          hover:bg-gray-100;
      }
-}
+
+     .sidebar{
+         @apply top-0 left-0;
+         @apply h-fit sm:h-screen;
+         @apply w-auto flex ;
+         @apply flex-row sm:flex-col;
+         @apply p-3 overflow-scroll;
+        
+         
+            
+        
+     }
 
 
-
-@screen sm{
-
-    .w-fixed {
-        @apply min-w-[230px] 
     
-    }
 }
+
+
+
