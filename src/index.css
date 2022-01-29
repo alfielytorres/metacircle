@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+     .sidebar-icon{
+         @apply relative flex items-center 
+         justify-center h-12 w-auto 
+         rounded-full
+         mt-2 mb-2 mx-auto 
+         pt-5 pl-3 pr-10 pb-5
+         bg-white
+         hover:bg-gray-100;
+     }
+}
+
+
+
+@screen sm{
+
+    .w-fixed {
+        @apply min-w-[230px] 
+    
+    }
+}
