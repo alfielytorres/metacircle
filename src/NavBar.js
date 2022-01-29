@@ -23,9 +23,9 @@ function NavBar() {
   }
 
     return (
-      <div className="items-center border-b-2 border-gray-100">
+      <div className="items-center border-b-2 border-gray-100 z-5000">
         <div className="pl-5 pr-5 py-1 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 ">
-      <div className="relative flex items-center justify-between ">
+      <div className="relative flex items-center z-5000 justify-between ">
         <div className="flex items-center">
           
             <div>
@@ -65,7 +65,7 @@ function NavBar() {
            
           </ul>
         </div>
-        <ul className="flex items-center hidden space-x-8 lg:flex">
+        <ul className="flex  items-center hidden space-x-8 lg:flex">
             <li>  
               {currentUser?.email} 
             </li>
@@ -120,7 +120,7 @@ function NavBar() {
             </svg>
           </button>
           {isMenuOpen && (
-            <div className="absolute top-0 left-0 w-full">
+            <div className="absolute top-0 left-0 w-full z-50">
               <div className="p-5 bg-white border rounded shadow-sm">
                 <div className="flex items-center justify-between mb-4">
                   <div>

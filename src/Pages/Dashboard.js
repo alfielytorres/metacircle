@@ -24,7 +24,7 @@ function Dashboard() {
                 <main role="main" className="w-full flex-grow pt-1 px-5">
     
                   <h2 className="mt-6 text-center text-3xl  text-gray-900 ">
-                   Make a booking ... 
+                 
                     </h2>
                 </main>
 
@@ -32,7 +32,7 @@ function Dashboard() {
                  border-l-2 
                  border-gray-100">
                      <h4 className="mt-6 text-center text-2xl  text-gray-900 ">
-                   Top Mentors 
+     
                     </h4>
                 </div>
             
