@@ -14,7 +14,7 @@ function Footer() {
                   <li>
                     <Link
                       to="/"
-                      className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
+                      className="text-gray-500 transition-colors duration-300 hover:text-primary"
                     >
                       Home
                     </Link>
@@ -22,7 +22,7 @@ function Footer() {
                   <li>
                     <a
                       href="/"
-                      className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
+                      className="text-gray-500 transition-colors duration-300 hover:text-primary"
                     >
                       Find a mentor
                     </a>
@@ -44,7 +44,7 @@ function Footer() {
                   <li>
                     <a
                       href="/"
-                      className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
+                      className="text-gray-500 transition-colors duration-300 hover:text-primary"
                     >
                       Build a meta circle
                     </a>
@@ -52,7 +52,7 @@ function Footer() {
                   <li>
                     <a
                       href="/"
-                      className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
+                      className="text-gray-500 transition-colors duration-300 hover:text-primary"
                     >
                       Join a meta circle
                     </a>
@@ -88,7 +88,7 @@ function Footer() {
                 
                 <a
                   href="https://alfiebuilds.substack.com/"
-                  className="group relative w-full flex justify-center py-3 px-3 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  className="group relative w-full flex justify-center py-3 px-3 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:primary"
                 >
                     
                   Go to the Newsletter

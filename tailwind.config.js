@@ -6,7 +6,12 @@ module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode:false,
   theme: {
-    extend: {},
+    extend: {
+      colors: { 
+        primary: '#2563eb',
+        secondary: '#000000' 
+      }
+    },
   },
   plugins: [],
 }

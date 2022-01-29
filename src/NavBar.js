@@ -34,7 +34,7 @@ function NavBar() {
                     <img src={logo} alt="metacircle logo" className="mr-2" width="40"></img>
                     
                     <span className="font-bold mr-2">Meta Circle</span>
-                    <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-indigo-100 bg-blue-700 rounded">ALPHA</span>
+                    <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-indigo-100 bg-primary rounded">ALPHA</span>
                     </a>
                     </Link>
             </div>
@@ -76,7 +76,7 @@ function NavBar() {
                         <button
                         onClick={handleLogout}
                         disabled={loading || !currentUser}
-                        className="group relative w-full flex justify-center py-3 px-3 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                        className="group relative w-full flex justify-center py-3 px-3 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
                         aria-label="Log out"
                         title="Log ou"
                       >
@@ -84,7 +84,7 @@ function NavBar() {
                       </button> : 
 
                       <Link to="/login"
-                      className="group relative w-full flex justify-center py-3 px-3 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                      className="group relative w-full flex justify-center py-3 px-3 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
                       aria-label="Get Started"
                       title="Get Started"
                       >
@@ -189,7 +189,7 @@ function NavBar() {
                     <button
                     onClick={handleLogout}
   
-                    className="group relative w-full flex justify-center py-3 px-3 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                    className="group relative w-full flex justify-center py-3 px-3 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
                     aria-label="Log out"
                     title="Log ou"
                   >
@@ -199,7 +199,7 @@ function NavBar() {
                         
                         to="/"
               
-                        className="group relative w-full flex justify-center py-3 px-3 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                        className="group relative w-full flex justify-center py-3 px-3 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
                         aria-label="Get Started"
                         title="Get Started"
                       >
