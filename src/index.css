@@ -4,32 +4,7 @@
 
 
 @layer components {
-     .sidebar-icon{
-         @apply relative flex items-center 
-         justify-center h-12 w-auto 
-         z-10
-        
-         rounded-full
-         mt-2 mb-2 mr-5 mx-auto 
-         pt-6 pl-4 pr-5 pb-6
-         
-         hover:bg-gray-100;
-
-         @apply bg-gray-100 md:bg-white;
-     }
-
-     .sidebar{
-         @apply top-0 left-0 z-0;  
-         @apply h-fit md:h-screen;
-         @apply w-auto flex ;
-         @apply flex-row md:flex-col;
-         @apply overflow-scroll;
-        
-         
-            
-        
-     }
-
+    
 
     
 }

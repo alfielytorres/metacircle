@@ -45,7 +45,7 @@ const firebaseConfig = {
     return signInWithEmailAndPassword(auth, email, password);
   }
 
-  export function logout(){
+  export function signout(){
     return signOut(auth);
   }
   export function useAuth(){
