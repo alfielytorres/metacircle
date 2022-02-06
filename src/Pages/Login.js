@@ -1,10 +1,12 @@
 import { LockClosedIcon, UserIcon } from '@heroicons/react/solid'
-import React, {useRef,useState } from 'react'
+import React, {useRef,useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../logo.png'
-import {signup, login} from "../firebase-config"
+import {signup, login, db, useAuth} from "../firebase-config"
 import { useNavigate } from "react-router-dom";
 import {  signInWithPopup, GoogleAuthProvider, getAuth } from "firebase/auth";
+import { doc, setDoc } from "firebase/firestore"; 
+
 
 
 
@@ -14,6 +16,10 @@ function Login() {
   const [ loading, setLoading ] = useState(false);
   const navigate = useNavigate();
   const auth = getAuth();
+
+  const currentUser = useAuth();
+  console.log(currentUser)
+  
 
   async function handleSignup(){
     setLoading(true);
@@ -28,7 +34,14 @@ function Login() {
  
   }
   
-
+  async function updateUserInfo(){
+      
+        const uid = auth.currentUser.uid;
+        const userRef = doc(db, 'users', uid);
+        
+        const user = {lastLoginTime: new Date()}
+         await setDoc(userRef, user);
+  }
   
 
 
@@ -37,7 +50,8 @@ function Login() {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
     .then((event)=>{
-      console.log(event)
+
+      updateUserInfo();
       navigate("/dashboard")
 
     })
@@ -52,6 +66,7 @@ function Login() {
     setLoading(true);
     try {
       await login(emailRef.current.value, passwordRef.current.value).then(()=>{
+        updateUserInfo();
         navigate("/dashboard")
       })
 

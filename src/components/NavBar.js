@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
-import logo from './logo.png'
+import logo from '../logo.png'
 import { Link } from 'react-router-dom'
-import { useAuth, signout } from "./firebase-config"
+import { useAuth, signout } from "../firebase-config"
 import { useNavigate } from "react-router-dom";
 
 function NavBar() {

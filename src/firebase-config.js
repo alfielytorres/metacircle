@@ -58,7 +58,14 @@ const firebaseConfig = {
         return unsub
     }, [])
 
-    console.log(currentUser)
+
     return currentUser;
+
+  }
+
+
+  export function getCurrentUser(){
+    console.log(auth.currentUser);
+    return auth.currentUser;
 
   }
